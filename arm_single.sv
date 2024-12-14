@@ -126,16 +126,17 @@ module top(input  logic        clk, reset,
   
 endmodule
 
-
-// To be Done
 module dmem(input  logic        clk, we,
             input  logic [31:0] a, wd,
             output logic [31:0] rd);
 
-  // Write Data Memory module body here
-  // Take care of word alignment
+  logic [31:0] RAM[63:0]; //assign my RAM block, 32 bit wide, 64 words
 
+  always @(posedge clk) begin
+    if(we) RAM[a[31:2]] <= wd; // word aligned, assign data to RAM on clock edge
+  end
 
+  assign rd = RAM[a[31:2]]; // word aligned,  assign data from RAM to rd combinationally 
 endmodule
 
 module imem(input  logic [31:0] a,
@@ -281,8 +282,29 @@ endmodule
 module condcheck(input  logic [3:0] Cond,
                  input  logic [3:0] Flags,
                  output logic       CondEx);
-  
-  // Write Conditional Check module body here
+
+  // Flags are 4'b NZCV              
+  always_comb begin 
+    case (Cond)
+    4'b0000: CondEx = Flags[1];                                // EQ
+    4'b0001: CondEx = ~Flags[1];                               // NE
+    4'b0010: CondEx = Flags[2];                                // CS/HS
+    4'b0011: CondEx = ~Flags[2];                               // CC/LO
+    4'b0100: CondEx = Flags[0];                                // MI
+    4'b0101: CondEx = ~Flags[0];                               // PL
+    4'b0110: CondEx = Flags[3];                                // VS
+    4'b0111: CondEx = ~Flags[3];                               // VC
+    4'b1000: CondEx = (Flags[2] & ~Flags[1]);                  // HI
+    4'b1001: CondEx = ~(Flags[2] & ~Flags[1]);                 // LS
+    4'b1010: CondEx = ~(Flags[0] ^ Flags[3]);                  // GE
+    4'b1011: CondEx = (Flags[0] ^ Flags[3]);                   // LT
+    4'b1100: CondEx = (~(Flags[0] ^ Flags[3]) & ~Flags[1]);    // GT
+    4'b1101: CondEx = ~(~(Flags[0] ^ Flags[3]) & ~Flags[1]);   // LE
+    4'b1110: CondEx = 1'b1;                                    // AL (always)
+    default: 
+      CondEx = 1'b0;                                           // never
+    endcase
+  end
 
 endmodule
 
@@ -308,13 +330,23 @@ module datapath(input  logic        clk, reset,
 
   // next PC logic
   // 4 Modules(mux2, flopr, adder, adder)
+    mux2 #(32) pcmux(PCPlus4, Result, PCSrc, PCNext);
+    flopr #(32) pcff(clk, reset, PCNext, PC);
+    adder #(32) pcadd4(PC, 32'b100, PCPlus4);
+    adder #(32) pcadd8(PCPlus4, 32'b100, PCPlus8);
 
   // register file logic
   // 5 Modules(mux2, regfile, extend, mux2, mux2)
-
+  mux2 #(32) SrcBmux(WriteData, ExtImm, ALUSrc, SrcB);
+  regfile rf(clk, RegWrite, RA1, RA2, Instr[15:12], Result, PCPlus8, SrcA, WriteData);
+  extend ext(Instr[23:0], ImmSrc, ExtImm);
+  mux2 #(4) ra1mux(Instr[19:16], 4'b1111, RegSrc[0], RA1);
+  mux2 #(4) ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2);
+  
   // ALU logic
   // 2 Modules(mux2, alu)
-
+  alu alu1(SrcA, SrcB, ALUControl, ALUResult, ALUFlags);  
+  mux2 #(32) resultmux(ReadData, ALUResult, MemtoReg, Result);
 
 endmodule
 
