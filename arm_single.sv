@@ -118,6 +118,11 @@ module top(input  logic        clk, reset,
   logic [31:0] PC, Instr, ReadData;
   
   // instantiate processor and memories
+  arm arm(clk, reset, PC, Instr, MemWrite, DataAdr, WriteData, ReadData);
+  // INSTRUCTION MEMORY TAKE PC AS ADDRESS AND OUTPUT INSTRUCTION
+  imem inst_mem(PC, Instr);
+  
+  dmem data_mem(clk, MemWrite, DataAdr ,WriteData, ReadData);
   
 endmodule
 
@@ -209,16 +214,17 @@ module decoder(input  logic [1:0] Op,
   // Write Main Decoder body here
   case(op)
   2'b00: begin
-    if(~Funct[5]) controls = 10'b0000001001;
-    else if(Funct[5]) controls = 10'b0000101001;
+    if(~Funct[5]) controls = 10'b0000101001;
+    else if(Funct[5]) controls = 10'b0000001001;
   end
   2'b01: begin
-    if(~funct[0]) controls = 10'b1001100100;
-    else if(funct[0]) controls = 10'b0001111000;
+    if(~funct[0]) controls = 10'b0001111000;
+    else if(funct[0]) controls = 10'b1001110100;
   end 
   2'b10: begin
     controls = 10'b0110100010;
   end
+  default: controls = 10'bx;
   endcase
 
   
