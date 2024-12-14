@@ -213,20 +213,26 @@ module decoder(input  logic [1:0] Op,
           RegW, MemW, Branch, ALUOp} = controls; 
 
   // Write Main Decoder body here
-  case(op)
-  2'b00: begin
-    if(~Funct[5]) controls = 10'b0000101001;
-    else if(Funct[5]) controls = 10'b0000001001;
-  end
-  2'b01: begin
-    if(~funct[0]) controls = 10'b0001111000;
-    else if(funct[0]) controls = 10'b1001110100;
-  end 
-  2'b10: begin
-    controls = 10'b0110100010;
-  end
-  default: controls = 10'bx;
-  endcase
+  always_comb begin
+        case (Op)
+            2'b00: begin
+                if (~Funct[5]) 
+                    controls = 10'b0000101001;
+                else 
+                    controls = 10'b0000001001;
+            end
+            2'b01: begin
+                if (~Funct[0]) 
+                    controls = 10'b0001111000;
+                else 
+                    controls = 10'b1001110100;
+            end 
+            2'b10: begin
+                controls = 10'b0110100010;
+            end
+            default: controls = 10'bx; // Default reset value
+        endcase
+    end
 
   
           
