@@ -357,27 +357,32 @@ module datapath(input  logic        clk, reset,
 endmodule
 
 
-module regfile(input  logic        clk, 
-               input  logic        we3, 
-               input  logic [3:0]  ra1, ra2, wa3, 
-               input  logic [31:0] wd3, r15,
-               output logic [31:0] rd1, rd2);
+module regfile(
+  input  logic        clk, 
+  input  logic        we3, 
+  input  logic [3:0]  ra1, ra2, wa3, 
+  input  logic [31:0] wd3, r15,
+  output logic [31:0] rd1, rd2
+);
 
-  // Write Register File module body here
-  // read two ports combinationally
-  // write third port on rising edge of clock
-  // register 15 reads PC+8 instead
+ 
   logic [31:0] registers [15:0];
+
+  
   always_ff @(posedge clk) begin
-    if(we3 && A3 != 4'b1111 ) registers[wa3] <= wd3;
+    if (we3 && wa3 != 4'b1111) begin
+      registers[wa3] <= wd3; /
+    end
+    registers[15] <= r15;
   end
+
   always_comb begin
-    rd1 = registers[ra1];
-    rd2 = registers[ra2];
-    registers[15] = r15;
+    rd1 = (ra1 == 4'b1111) ? r15 : registers[ra1];
+    rd2 = (ra2 == 4'b1111) ? r15 : registers[ra2];
   end
 
 endmodule
+
 
 module extend(input  logic [23:0] Instr,
               input  logic [1:0]  ImmSrc,
