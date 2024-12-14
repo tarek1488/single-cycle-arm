@@ -209,15 +209,15 @@ module decoder(input  logic [1:0] Op,
   // Write Main Decoder body here
   case(op)
   2'b00: begin
-    if(~Funct[5]) controls = 2'b0000001001;
-    else if(Funct[5]) controls = 2'b0000101001;
+    if(~Funct[5]) controls = 10'b0000001001;
+    else if(Funct[5]) controls = 10'b0000101001;
   end
   2'b01: begin
-    if(~funct[0]) controls = 2'b100010101100;
-    else if(funct[0]) controls = 2'b0001111000;
+    if(~funct[0]) controls = 10'b1001100100;
+    else if(funct[0]) controls = 10'b0001111000;
   end 
   2'b10: begin
-    controls = 2'b0110100010;
+    controls = 10'b0110100010;
   end
   endcase
 
@@ -323,6 +323,15 @@ module regfile(input  logic        clk,
   // read two ports combinationally
   // write third port on rising edge of clock
   // register 15 reads PC+8 instead
+  logic [31:0] registers [15:0];
+  always_ff @(posedge clk) begin
+    if(we3 && A3 != 4'b1111 ) registers[wa3] <= wd3;
+  end
+  always_comb begin
+    rd1 = registers[ra1];
+    rd2 = registers[ra2];
+    registers[15] = r15;
+  end
 
 endmodule
 
@@ -331,6 +340,14 @@ module extend(input  logic [23:0] Instr,
               output logic [31:0] ExtImm);
 
     // Write Extender module body here
+    always_comb begin
+        case (ImmSrc)
+            2'b00: ExtImm = {24'b0, Instr[7:0]}; 
+            2'b01: ExtImm = {20'b0, Instr[11:0]}; 
+            2'b10: ExtImm = {2'b0, {6{Instr[23]}}, Instr}; 
+            default: ExtImm = 32'b0;
+        endcase
+    end
 
 endmodule
 
