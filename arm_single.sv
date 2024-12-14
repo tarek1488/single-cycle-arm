@@ -371,7 +371,7 @@ module regfile(
   
   always_ff @(posedge clk) begin
     if (we3 && wa3 != 4'b1111) begin
-      registers[wa3] <= wd3; /
+      registers[wa3] <= wd3;
     end
     registers[15] <= r15;
   end
