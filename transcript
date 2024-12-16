@@ -22230,3 +22230,321 @@ run
 # ** Note: $stop    : /home/aser/coding/armss/single-cycle-arm/arm_single.sv(117)
 #    Time: 205 ps  Iteration: 1  Instance: /testbench
 # Break in Module testbench at /home/aser/coding/armss/single-cycle-arm/arm_single.sv line 117
+# Compile of arm_single.sv was successful.
+# Compile of arm_single.sv was successful.
+vsim work.testbench
+# End time: 01:34:54 on Dec 17,2024, Elapsed time: 0:01:31
+# Errors: 0, Warnings: 3
+# vsim work.testbench 
+# Start time: 01:34:54 on Dec 17,2024
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.imem
+# Loading work.dmem
+vsim work.testbench
+# End time: 01:35:03 on Dec 17,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 1
+# vsim work.testbench 
+# Start time: 01:35:03 on Dec 17,2024
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.imem
+# Loading work.dmem
+run
+# inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
+# inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
+# inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
+# inclk
+# MemWrite: 0, DataAdr: 00000005, WriteData: xxxxxxxx
+# inclk
+# MemWrite: 0, DataAdr: 0000000c, WriteData: xxxxxxxx
+# inclk
+# MemWrite: 0, DataAdr: 00000003, WriteData: xxxxxxxx
+# inclk
+# MemWrite: 0, DataAdr: 00000007, WriteData: 00000005
+# inclk
+# MemWrite: 0, DataAdr: 00000004, WriteData: 00000007
+# inclk
+# MemWrite: 0, DataAdr: 0000000b, WriteData: 00000007
+# inclk
+# MemWrite: 0, DataAdr: 00000008, WriteData: 00000003
+run
+# inclk
+# MemWrite: 0, DataAdr: 00000058, WriteData: xxxxxxxx
+# inclk
+# MemWrite: 0, DataAdr: 00000005, WriteData: 00000007
+# inclk
+# MemWrite: 0, DataAdr: 00000030, WriteData: 00000000
+# inclk
+# MemWrite: 0, DataAdr: fffffffe, WriteData: 00000005
+# inclk
+# MemWrite: 0, DataAdr: 0000000c, WriteData: xxxxxxxx
+# inclk
+# MemWrite: 0, DataAdr: 00000007, WriteData: 00000005
+# inclk
+# MemWrite: 1, DataAdr: 00000060, WriteData: 00000007
+# inmem
+# inclk
+# MemWrite: 0, DataAdr: 00000060, WriteData: 00000000
+# inclk
+# MemWrite: 0, DataAdr: 0000004c, WriteData: 00000000
+# inclk
+# MemWrite: 0, DataAdr: 00000058, WriteData: xxxxxxxx
+run
+# inclk
+# MemWrite: 1, DataAdr: 00000064, WriteData: 00000007
+# inmem
+# Simulation succeeded
+# ** Note: $stop    : /home/aser/coding/armss/single-cycle-arm/arm_single.sv(117)
+#    Time: 205 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at /home/aser/coding/armss/single-cycle-arm/arm_single.sv line 117
+quit-sim
+# invalid command name "quit-sim"
+quit sim
+# unknown switch: sim
+quit -sim
+# End time: 01:38:48 on Dec 17,2024, Elapsed time: 0:03:45
+# Errors: 0, Warnings: 2
+# reading /home/aser/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project whytho
+# Compile of okbutwhy.sv was successful.
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 01:39:36 on Dec 17,2024
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.condcheck_v1
+# Loading work.condcheck_v2
+run
+# Mismatch for Cond=0000, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=0001: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0111: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=1000: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1110: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0001: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0111: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=1000: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1110: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=0001: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=0011: v1=1, v2=0
+run
+# Mismatch for Cond=0110, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=0111: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=1000: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1110: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0001: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0111: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=1000: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1110: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=0100: v1=0, v2=1
+run
+# Mismatch for Cond=1100, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=1101, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=1101: v1=1, v2=0
+# Total mismatches:          88
+# ** Note: $finish    : /home/aser/coding/armss/testinglmao/okbutwhy.sv(39)
+#    Time: 256 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at /home/aser/coding/armss/testinglmao/okbutwhy.sv line 39
+# Compile of okbutwhy.sv was successful.
+vsim work.testbench
+# End time: 01:41:27 on Dec 17,2024, Elapsed time: 0:01:51
+# Errors: 0, Warnings: 6
+# vsim work.testbench 
+# Start time: 01:41:27 on Dec 17,2024
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.condcheck_v1
+# Loading work.condcheck_v2
+run
+# Mismatch for Cond=0000, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=0000, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0000, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=0001, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0001, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=0010, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0010, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=0011, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0011, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=0001: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=0111: v1=0, v2=1
+# Mismatch for Cond=0100, Flags=1000: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0100, Flags=1110: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0001: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=0111: v1=1, v2=0
+# Mismatch for Cond=0101, Flags=1000: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0101, Flags=1110: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=0001: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=0011: v1=1, v2=0
+run
+# Mismatch for Cond=0110, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=0111: v1=1, v2=0
+# Mismatch for Cond=0110, Flags=1000: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=0110, Flags=1110: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0001: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=0111: v1=0, v2=1
+# Mismatch for Cond=0111, Flags=1000: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=0111, Flags=1110: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0011: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=0100: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=0101: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=1010: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=1000, Flags=1100: v1=0, v2=1
+# Mismatch for Cond=1000, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0011: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=0101: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=1010: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=1001, Flags=1100: v1=1, v2=0
+# Mismatch for Cond=1001, Flags=1101: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=0010: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=0100: v1=0, v2=1
+run
+# Mismatch for Cond=1100, Flags=1011: v1=1, v2=0
+# Mismatch for Cond=1100, Flags=1101: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=0010: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=0100: v1=1, v2=0
+# Mismatch for Cond=1101, Flags=1011: v1=0, v2=1
+# Mismatch for Cond=1101, Flags=1101: v1=1, v2=0
+# Total mismatches:          88 out of         256 cases
+# ** Note: $finish    : /home/aser/coding/armss/testinglmao/okbutwhy.sv(41)
+#    Time: 256 ps  Iteration: 0  Instance: /testbench
+# End time: 01:41:39 on Dec 17,2024, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 0

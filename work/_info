@@ -11,7 +11,7 @@ cModel Technology
 d/home/aser/intelFPGA/project_1
 vadder
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1734391992
+Z1 !s110 1734392086
 !i10b 1
 !s100 cWUeVE3zI?K@J58zXhk5W2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ Z4 d/home/aser/coding/armss/single-cycle-arm
 Z5 w1734391985
 Z6 8/home/aser/coding/armss/single-cycle-arm/arm_single.sv
 Z7 F/home/aser/coding/armss/single-cycle-arm/arm_single.sv
-!i122 33
+!i122 35
 L0 589 10
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1734391992.000000
+Z9 !s108 1734392086.000000
 !s107 /home/aser/coding/armss/single-cycle-arm/arm_single.sv|
 Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/aser/coding/armss/single-cycle-arm/arm_single.sv|
 !i113 1
@@ -47,7 +47,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 642 28
 R8
 r1
@@ -72,7 +72,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 195 47
 R8
 r1
@@ -97,7 +97,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 400 31
 R8
 r1
@@ -122,7 +122,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 355 44
 R8
 r1
@@ -147,7 +147,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 243 46
 R8
 r1
@@ -172,7 +172,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 435 101
 R8
 r1
@@ -197,7 +197,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 292 62
 R8
 r1
@@ -222,7 +222,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 165 17
 R8
 r1
@@ -247,7 +247,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 567 17
 R8
 r1
@@ -272,7 +272,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 600 14
 R8
 r1
@@ -297,7 +297,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 615 13
 R8
 r1
@@ -322,7 +322,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 183 11
 R8
 r1
@@ -347,7 +347,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 629 11
 R8
 r1
@@ -372,7 +372,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 538 27
 R8
 r1
@@ -397,7 +397,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 76 49
 R8
 r1
@@ -422,7 +422,7 @@ R4
 R5
 R6
 R7
-!i122 33
+!i122 35
 L0 128 36
 R8
 r1
