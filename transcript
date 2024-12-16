@@ -1,15 +1,8 @@
 # Loading project ArmSim
-# Compile of arm_single.sv failed with 2 errors.
-# Compile of arm_single.sv failed with 2 errors.
-# Error opening /home/aser/coding/armss/single-cycle-arm/(vlog-13069) /home/aser/coding/armss/single-cycle-arm/arm_single.sv
-# Path name '/home/aser/coding/armss/single-cycle-arm/(vlog-13069) /home/aser/coding/armss/single-cycle-arm/arm_single.sv' doesn't exist.
-# Compile of arm_single.sv failed with 2 errors.
-# Error opening /home/aser/coding/armss/single-cycle-arm/(vlog-13069) /home/aser/coding/armss/single-cycle-arm/arm_single.sv
-# Path name '/home/aser/coding/armss/single-cycle-arm/(vlog-13069) /home/aser/coding/armss/single-cycle-arm/arm_single.sv' doesn't exist.
 # Compile of arm_single.sv was successful.
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 23:54:38 on Dec 16,2024
+# Start time: 00:27:03 on Dec 17,2024
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.top
@@ -28,42 +21,7 @@ vsim work.testbench
 # Loading work.alu
 # Loading work.imem
 # Loading work.dmem
-add wave -position end sim:/testbench/*
-run
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# inclk
-# Compile of arm_single.sv was successful.
-vsim work.testbench
-# End time: 23:59:12 on Dec 16,2024, Elapsed time: 0:04:34
-# Errors: 0, Warnings: 6
-# vsim work.testbench 
-# Start time: 23:59:12 on Dec 16,2024
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.top
-# Loading work.arm
-# Loading work.controller
-# Loading work.decoder
-# Loading work.condlogic
-# Loading work.flopenr
-# Loading work.condcheck
-# Loading work.datapath
-# Loading work.mux2
-# Loading work.flopr
-# Loading work.adder
-# Loading work.regfile
-# Loading work.extend
-# Loading work.alu
-# Loading work.imem
-# Loading work.dmem
+# WARNING: No extended dataflow license exists
 add wave -position end sim:/testbench/*
 run
 # inclk
@@ -230,25 +188,72 @@ run
 # inclk
 # inclk
 # inclk
+# Load canceled
+# Compile of arm_single.sv was successful.
+vsim work.testbench
+# End time: 00:29:19 on Dec 17,2024, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 3
+# vsim work.testbench 
+# Start time: 00:29:19 on Dec 17,2024
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.imem
+# Loading work.dmem
+# WARNING: No extended dataflow license exists
+add wave -position end sim:/testbench/*
 run
 # inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
 # inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
 # inclk
+# MemWrite: 0, DataAdr: 00000000, WriteData: 00000008
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 run
 # inclk
+# MemWrite: 0, DataAdr: 00000058, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx
 # inclk
+# MemWrite: 0, DataAdr: xxxxxxxx, WriteData: xxxxxxxx

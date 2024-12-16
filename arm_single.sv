@@ -108,7 +108,7 @@ module testbench ();
   // check results
   always @(negedge clk) begin
     $display("inclk");
-
+    $display("MemWrite: %b, DataAdr: %h, WriteData: %h", MemWrite, DataAdr, WriteData);
     if (MemWrite) begin
       $display("inmem");
 
@@ -172,11 +172,12 @@ module dmem (
 
   logic [31:0] RAM[63:0];  //assign my RAM block, 32 bit wide, 64 words
 
+  assign rd = RAM[a[31:2]];  // word aligned,  assign data from RAM to rd combinationally 
+
   always_ff @(posedge clk) begin
     if (we) RAM[a[31:2]] <= wd;  // word aligned, assign data to RAM on clock edge
   end
 
-  assign rd = RAM[a[31:2]];  // word aligned,  assign data from RAM to rd combinationally 
 endmodule
 
 module imem (
@@ -306,10 +307,9 @@ module decoder (
   logic [9:0] controls;
   logic Branch, ALUOp;
 
-  assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
 
   // Write Main Decoder body here
-  always_comb begin
+  always_comb
     casex (Op)
       2'b00: begin
         if (Funct[5]) controls = 10'b0000101001;
@@ -324,8 +324,8 @@ module decoder (
       end
       default: controls = 10'bx;  // Default reset value
     endcase
-  end
 
+  assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
 
 
   // ALU Decoder             
@@ -421,7 +421,7 @@ module condcheck (
       4'b1100: CondEx = (~(Flags[0] ^ Flags[3]) & ~Flags[1]);  // GT
       4'b1101: CondEx = ~(~(Flags[0] ^ Flags[3]) & ~Flags[1]);  // LE
       4'b1110: CondEx = 1'b1;  // AL (always)
-      default: CondEx = 1'b0;  // never
+      default: CondEx = 1'bx;  // never
     endcase
   end
 
@@ -545,11 +545,11 @@ module regfile (
 );
 
 
-  logic [31:0] registers[15:0];
+  logic [31:0] registers[14:0];
 
 
   always_ff @(posedge clk) begin
-    if (we3 && wa3 != 4'b1111) begin
+    if (we3) begin
       registers[wa3] <= wd3;
     end
   end
