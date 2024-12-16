@@ -310,7 +310,7 @@ module decoder (
 
   // Write Main Decoder body here
   always_comb
-    casex (Op)
+    case (Op)
       2'b00: begin
         if (Funct[5]) controls = 10'b0000101001;
         else controls = 10'b0000001001;
@@ -523,8 +523,8 @@ module datapath (
       ALUFlags
   );
   mux2 #(32) resultmux (
-      ReadData,
       ALUResult,
+      ReadData,
       MemtoReg,
       Result
   );
@@ -543,7 +543,6 @@ module regfile (
     output logic [31:0] rd1,
     rd2
 );
-
 
   logic [31:0] registers[14:0];
 
@@ -569,14 +568,14 @@ module extend (
 );
 
   // Write Extender module body here
-  always_comb begin
+  always_comb
     case (ImmSrc)
       2'b00:   ExtImm = {24'b0, Instr[7:0]};
       2'b01:   ExtImm = {20'b0, Instr[11:0]};
       2'b10:   ExtImm = {{6{Instr[23]}}, Instr[23:0], 2'b00};
       default: ExtImm = 32'bx;
     endcase
-  end
+
 
 endmodule
 
