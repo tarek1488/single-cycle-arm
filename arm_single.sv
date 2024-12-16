@@ -310,7 +310,7 @@ module decoder (
 
   // Write Main Decoder body here
   always_comb
-    case (Op)
+    casex (Op)
       2'b00: begin
         if (Funct[5]) controls = 10'b0000101001;
         else controls = 10'b0000001001;
@@ -403,29 +403,32 @@ module condcheck (
     output logic       CondEx
 );
 
-  // Flags are 4'b NZCV              
-  always_comb begin
-    case (Cond)
-      4'b0000: CondEx = Flags[1];  // EQ
-      4'b0001: CondEx = ~Flags[1];  // NE
-      4'b0010: CondEx = Flags[2];  // CS/HS
-      4'b0011: CondEx = ~Flags[2];  // CC/LO
-      4'b0100: CondEx = Flags[0];  // MI
-      4'b0101: CondEx = ~Flags[0];  // PL
-      4'b0110: CondEx = Flags[3];  // VS
-      4'b0111: CondEx = ~Flags[3];  // VC
-      4'b1000: CondEx = (Flags[2] & ~Flags[1]);  // HI
-      4'b1001: CondEx = ~(Flags[2] & ~Flags[1]);  // LS
-      4'b1010: CondEx = ~(Flags[0] ^ Flags[3]);  // GE
-      4'b1011: CondEx = (Flags[0] ^ Flags[3]);  // LT
-      4'b1100: CondEx = (~(Flags[0] ^ Flags[3]) & ~Flags[1]);  // GT
-      4'b1101: CondEx = ~(~(Flags[0] ^ Flags[3]) & ~Flags[1]);  // LE
-      4'b1110: CondEx = 1'b1;  // AL (always)
-      default: CondEx = 1'bx;  // never
-    endcase
-  end
+  logic neg, zero, carry, overflow, ge;
 
+  assign {neg, zero, carry, overflow} = Flags;
+  assign ge = (neg == overflow);
+
+  always_comb
+    case (Cond)
+      4'b0000: CondEx = zero;  // EQ
+      4'b0001: CondEx = ~zero;  // NE
+      4'b0010: CondEx = carry;  // CS
+      4'b0011: CondEx = ~carry;  // CC
+      4'b0100: CondEx = neg;  // MI
+      4'b0101: CondEx = ~neg;  // PL
+      4'b0110: CondEx = overflow;  // VS
+      4'b0111: CondEx = ~overflow;  // VC
+      4'b1000: CondEx = carry & ~zero;  // HI
+      4'b1001: CondEx = ~(carry & ~zero);  // LS
+      4'b1010: CondEx = ge;  // GE
+      4'b1011: CondEx = ~ge;  // LT
+      4'b1100: CondEx = ~zero & ge;  // GT
+      4'b1101: CondEx = ~(~zero & ge);  // LE
+      4'b1110: CondEx = 1'b1;  // Always
+      default: CondEx = 1'bx;  // undefined
+    endcase
 endmodule
+
 
 
 
