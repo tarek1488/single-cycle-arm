@@ -11,44 +11,44 @@ cModel Technology
 d/home/aser/intelFPGA/project_1
 vadder
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1734392086
+Z1 !s110 1734393068
 !i10b 1
-!s100 cWUeVE3zI?K@J58zXhk5W2
+!s100 YO[HVlJmJB[=;A2GVzIBf1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IVS:QaHC`UWlc[L19;A7]Z3
+I=HE01QAcf4V_6mV5mOaSD2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 Z4 d/home/aser/coding/armss/single-cycle-arm
-Z5 w1734391985
+Z5 w1734392963
 Z6 8/home/aser/coding/armss/single-cycle-arm/arm_single.sv
 Z7 F/home/aser/coding/armss/single-cycle-arm/arm_single.sv
-!i122 35
-L0 589 10
+!i122 36
+L0 585 10
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1734392086.000000
+Z9 !s108 1734393068.000000
 !s107 /home/aser/coding/armss/single-cycle-arm/arm_single.sv|
-Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/aser/coding/armss/single-cycle-arm/arm_single.sv|
+Z10 !s90 -reportprogress|300|-work|work|/home/aser/coding/armss/single-cycle-arm/arm_single.sv|
 !i113 1
-Z11 o-work work -sv
+Z11 o-work work
 Z12 tCvgOpt 0
 valu
 R0
 R1
 !i10b 1
-!s100 FX::G[RX2j]dV9=o@gCRJ3
+!s100 zR@gK1n08Z80Tl2;R;GX30
 R2
-IlKcOogJ8UhV?`P>Jz^REh3
+I7<TXHi??nbIEH95O>HlG[2
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 642 28
+!i122 36
+L0 638 28
 R8
 r1
 !s85 0
@@ -65,14 +65,14 @@ R1
 !i10b 1
 !s100 3]m5]EM>mZJLAGdT73PGI2
 R2
-IHo<=S`QXAgna0o_>^TUmB0
+IhFiOm]jcXio]09WSG1@M23
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 195 47
 R8
 r1
@@ -88,17 +88,17 @@ vcondcheck
 R0
 R1
 !i10b 1
-!s100 iRSk85H<T16zb;S39QF?_0
+!s100 m`1bfQ^dVfV;0PlTTdF_b3
 R2
-ICJff97S;h6CZ7Fe?3UA`C1
+IdHX;>9c=dQnP^BJL5NA^83
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 400 31
+!i122 36
+L0 401 26
 R8
 r1
 !s85 0
@@ -115,14 +115,14 @@ R1
 !i10b 1
 !s100 NQnm6j<7T;B7NCOaLzzU31
 R2
-IhdW:OYP5HPoZ_`^aMQgQT0
+I3R?iWzmJSQGRXgoTQWh;:2
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 355 44
 R8
 r1
@@ -140,14 +140,14 @@ R1
 !i10b 1
 !s100 HceQYS8E<_[SamFRac]9O1
 R2
-ILnAmULDCYgE[Q0;?gTZ<72
+IOb]>2EJ<NI3CnS^hb>m_X2
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 243 46
 R8
 r1
@@ -163,17 +163,17 @@ vdatapath
 R0
 R1
 !i10b 1
-!s100 M@@ik@k:M_8Wko]JlPa;?2
+!s100 4Um;;1Vcz@2;RTEYO:_`C0
 R2
-I>an[S:;b^5P_OIYacM`Th2
+I=_f2z:AzgUmK4DCV[2ok>2
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 435 101
+!i122 36
+L0 431 101
 R8
 r1
 !s85 0
@@ -190,14 +190,14 @@ R1
 !i10b 1
 !s100 H@F@D?eEN93fV2[jSSDC:2
 R2
-IG@>9PnOQ_Bd]DkgRO97<d0
+I0IFXMU;=04M^d<R@J37^43
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 292 62
 R8
 r1
@@ -215,14 +215,14 @@ R1
 !i10b 1
 !s100 6b@nlY]]9ZV=f9Ozig0G?0
 R2
-IgN:AMgM?PGnYM>I]@9IXe0
+Iio`U<TDYf74EnmX^:DGB01
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 165 17
 R8
 r1
@@ -238,17 +238,17 @@ vextend
 R0
 R1
 !i10b 1
-!s100 TVX18Wfi8Y_XA3nL3I8Zl2
+!s100 k;H>Xfk[o0D_RgXlWDhTh1
 R2
-IICK_MWI21T5CDC87aSQZF3
+IQ3Z?^F^LAL76aEeaM9Whm0
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 567 17
+!i122 36
+L0 563 17
 R8
 r1
 !s85 0
@@ -263,17 +263,17 @@ vflopenr
 R0
 R1
 !i10b 1
-!s100 oMi^UNcRe1_aW4=>GCL:A3
+!s100 [D3YGjaN@7?KH=>FNjDZR3
 R2
-IM1Y<aN6G6<BUa@H@;j=KQ0
+IU:l9IHIiHRzeD@fKULJ_>1
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 600 14
+!i122 36
+L0 596 14
 R8
 r1
 !s85 0
@@ -288,17 +288,17 @@ vflopr
 R0
 R1
 !i10b 1
-!s100 95>AP[o]3:I]V8HCQX7>43
+!s100 i76hjo5V4O^;g3g7NkGEH1
 R2
-IUT9`=7Q6<Pk4KUZUazc^O3
+IUgfBYTmHP7I]LV1WnD5ZC1
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 615 13
+!i122 36
+L0 611 13
 R8
 r1
 !s85 0
@@ -315,14 +315,14 @@ R1
 !i10b 1
 !s100 D^fRXXJ8VXWNX3>Q<TaJ73
 R2
-IHKZ<I=nDcl@`g1hB]N31P1
+IeASF9:53T93eGi@0diie=0
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 183 11
 R8
 r1
@@ -338,17 +338,17 @@ vmux2
 R0
 R1
 !i10b 1
-!s100 d^@FW41ICb[cPK_XL[7L@3
+!s100 Xb0_^k`SDX9dbD2W=gniD1
 R2
-IYP3<g?mb0akFg98@ee?=E2
+IgP;nL5III<=ZR;YT1_k<g1
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 629 11
+!i122 36
+L0 625 11
 R8
 r1
 !s85 0
@@ -363,17 +363,17 @@ vregfile
 R0
 R1
 !i10b 1
-!s100 GkS8<5aaijV9SCClL32K`1
+!s100 ;gGF^Tba_kfjTFX3WPXZo2
 R2
-I94anTl>:CYf5AW4U`1Y[;2
+I=SM]G`Ae0?H4AcQ7ZoB9=0
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
-L0 538 27
+!i122 36
+L0 534 27
 R8
 r1
 !s85 0
@@ -390,14 +390,14 @@ R1
 !i10b 1
 !s100 kGE4G<VGP1nL;mWX@6;]@3
 R2
-I4?9J99DfJzX=`6RmIkgST2
+IC6JkDzV`63EYIUjcHNUj=1
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 76 49
 R8
 r1
@@ -415,14 +415,14 @@ R1
 !i10b 1
 !s100 FA73zW^>P19jl7k1cYV[O3
 R2
-I]DkbhJEo<KDX5GFJE0_D>2
+I=JHO<d[FVZNdO@0zDM^j92
 R3
 S1
 R4
 R5
 R6
 R7
-!i122 35
+!i122 36
 L0 128 36
 R8
 r1
